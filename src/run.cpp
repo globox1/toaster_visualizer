@@ -491,7 +491,7 @@ class Run
      * @param z 			size of the marker in the z direction
      * @return marker 		new marker with input modifications
      */
-	visualization_msgs::Marker setSize(visualization_msgs::Marker marker, int x, int y, int z)
+	visualization_msgs::Marker setSize(visualization_msgs::Marker marker, float x, float y, float z)
 	{	
 		marker.scale.x = 1*x;
 		marker.scale.y = 1*y;
@@ -533,7 +533,7 @@ class Run
 			
 			visualization_msgs::Marker mn = defineName(m);
 			mn = setColor(mn, 1.0, 1.0, 1.0);
-			mn = setSize(mn, 0, 0, 1);
+			mn = setSize(mn, 0, 0, 0.5);
 			
 			obj_list.markers.push_back(mn);
 			obj_list.markers.push_back(m);
